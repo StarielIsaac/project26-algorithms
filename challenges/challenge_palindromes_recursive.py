@@ -14,4 +14,4 @@ def is_palindrome_recursive(word, low_index, high_index):
         return False
 
 
-print(is_palindrome_recursive('arara', 1, 3))
+# print(is_palindrome_recursive('arara', 1, 3))
