@@ -19,3 +19,6 @@ def validate_Numbers(nums):
         return False
 
     return True
+
+
+print(find_duplicate([1, 2, 3, 2]))
