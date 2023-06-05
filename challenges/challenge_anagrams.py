@@ -4,10 +4,7 @@ def is_anagram(first_string, second_string):
     second = mergesort_string(second_string.lower()).lower()
     # print(first, second)
 
-    if first_string == '' or second_string == '':
-        return (first, second, False)
-
-    if (first == second):
+    if (len(first) > 0 and first == second):
         return (first, second, True)
     else:
         return (first, second, False)
