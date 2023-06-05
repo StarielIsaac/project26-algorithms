@@ -1,24 +1,17 @@
 def find_duplicate(nums):
-    if not validate_Numbers(nums):
+    if not validate_numbers(nums):
         return False
 
-    if nums[0] in nums[1:]:
-        return nums[0]
+    nums.sort()
 
-    return find_duplicate(nums[1:])
+    for i in range(1, len(nums)):
+        if nums[i] == nums[i - 1]:
+            return nums[i]
 
-
-def validate_Numbers(nums):
-    if not nums or type(nums) == str:
-        return False
-
-    if len(nums) == 1 or len(set(nums)) == len(nums):
-        return False
-
-    if nums[0] < 0:
-        return False
-
-    return True
+    return False
 
 
-print(find_duplicate([1, 2, 3, 2]))
+def validate_numbers(nums):
+    return bool(nums and len(nums) > 1 and
+                all(isinstance(num, int) for num in nums) and
+                nums[0] >= 0 and len(set(nums)) < len(nums))
