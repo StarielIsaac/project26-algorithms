@@ -1,5 +1,9 @@
 def is_palindrome_recursive(word, low_index, high_index):
     # condição de parada
+
+    if len(word) == 0:
+        return False
+
     if low_index >= high_index:
         return True
 
